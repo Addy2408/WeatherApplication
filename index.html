@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather Application</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="search-container">
+        <input type="text" id="search-city-name" />
+        <button id="search-btn">Seacrh</button>
+      </div>
+      <div class="data-container">
+        <div class="location-container">
+          <h1 id="location"></h1>
+        </div>
+        <div class="temperature-container">
+          <p>
+            <span id="temperature"></span>
+            <span>&deg;C</span>
+          </p>
+          <div>
+            <img id="weather-icon" src="" alt="weather-icon" />
+          </div>
+        </div>
+        <div class="temperature-description-container">
+          <p id="temperature-description">loading...</p>
+        </div>
+        <div class="humidity-container">
+          <h4>Humidity</h4>
+          <p id="humidity">loading...</p>
+        </div>
+        <div class="pressure-container">
+          <h4>Pressure</h4>
+          <p id="pressure">loading...</p>
+        </div>
+        <div class="wind-speed-container">
+          <h4>Wind Speed</h4>
+          <p id="wind-speed">loading...</p>
+        </div>
+        <div class="wind-direction-container">
+          <h4>Wind Direction</h4>
+          <p id="wind-direction">loading...</p>
+        </div>
+        <div class="sunrise-container">
+          <h4>Sunrise Time</h4>
+          <p id="sunrise">loading...</p>
+        </div>
+        <div class="sunset-container">
+          <h4>Sunset Time</h4>
+          <p id="sunset">loading...</p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
