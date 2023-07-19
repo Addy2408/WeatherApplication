@@ -109,7 +109,7 @@ button:hover {
     width: 75%;
   }
   .personal-links a{
-    display: contentsF;
+    display: contents;
   }
 }
 @media only screen and (min-width: 700px) {
