@@ -88,11 +88,28 @@ button:hover {
   font-size: 1.5rem;
   justify-content: center;
 }
+.info-container{
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.personal-links a{
+  text-decoration: none;
+  color: black;
+  display: none;
+}
 
 @media only screen and (min-width: 620px) {
   .data-container,
   .search-container {
     width: 75%;
+  }
+  .personal-links a{
+    display: contentsF;
   }
 }
 @media only screen and (min-width: 700px) {
@@ -105,6 +122,10 @@ button:hover {
   .data-container,
   .search-container {
     width: 40%;
+  }
+  .info-container{
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 @media only screen and (min-width: 1120px) {
