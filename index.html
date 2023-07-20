@@ -10,15 +10,29 @@
       href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Weather Application</title>
   </head>
-  <body>
-    <div class="main-container">
+  <body id="body">
+    <div class="main-container" id="main-container">
       <div class="search-container">
         <input type="text" id="search-city-name" />
-        <button id="search-btn">Seacrh</button>
+        <button id="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
       <div class="data-container">
+        <div class="toggle-container">
+          <div id="toggle">
+            <div class="indicator"></div>
+          </div>
+        </div>
         <div class="location-container">
           <h1 id="location"></h1>
         </div>

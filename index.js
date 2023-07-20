@@ -1,3 +1,9 @@
+const toggle = document.getElementById('toggle');
+toggle.onclick = function(){
+  document.getElementById('body').classList.toggle('active');
+  toggle.classList.toggle('active');
+}
+
 // accessing latitude and longitude using js geolocation
 const success = async (position) => {
   latitude = position.coords.latitude;
@@ -159,6 +165,9 @@ async function checkWeather(city) {
     alert(`Enter a valid city name.`);
   }
 }
+
+// if someone doesn't allow location permission then the default value of city will be Delhi.
+checkWeather("Delhi");
 
 searchBtn.addEventListener("click", () => {
   checkWeather(searchCity.value);

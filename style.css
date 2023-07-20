@@ -5,13 +5,44 @@
   font-family: "Ysabeau SC", sans-serif;
 }
 .main-container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
+/* theme toggler */
+.toggle-container {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+#toggle {
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  cursor: pointer;
+}
+#toggle .indicator {
+  height: 1.5rem;
+  width: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px inset,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 1rem;
+  transform: scale(0.8);
+  transition: 0.5s;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
 .data-container,
 .search-container {
   width: 90%;
@@ -25,13 +56,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 .search-container {
   flex-direction: row;
   padding: 1rem;
 }
-input {
-  width: 80%;
+#search-city-name {
+  width: 90%;
   padding: 0.5rem;
   border: none;
   border-radius: 5px 0 0 5px;
@@ -39,11 +71,11 @@ input {
   background-color: rgb(240, 240, 240);
   text-align: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-button {
-  width: 20%;
+#search-btn {
+  width: 10%;
   padding: 0.5rem;
   border: none;
   border-radius: 0 5px 5px 0;
@@ -58,7 +90,6 @@ button:hover {
   cursor: pointer;
 }
 .location-container {
-  padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,32 +114,74 @@ button:hover {
 #temperature {
   font-size: 3rem;
 }
-.temperature-description-container{
+.temperature-description-container {
   padding: 0;
   font-size: 1.5rem;
   justify-content: center;
 }
-.info-container{
-  padding: 1rem 2rem;
+.info-container {
+  margin: 1rem 0 0 0;
+  padding: 0 2rem 1rem;
   width: 100%;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.personal-links a{
+.personal-links a {
   text-decoration: none;
   color: black;
   display: none;
 }
 
+/* dark theme styling */
+#toggle.active {
+  background-color: rgba(104, 104, 104, 0.932);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgb(0, 0, 0) 0px 30px 60px -30px,
+    rgba(2, 2, 3, 0.358) 0px -2px 6px 0px inset;
+}
+#toggle.active .indicator {
+  left: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgb(0, 0, 0) 0px 30px 60px -30px inset,
+  rgba(2, 2, 3, 0.358) 0px -2px 6px 0px inset;
+}
+
+#body.active .main-container{
+  background-color: rgba(0, 0, 0, 0.768);
+}
+#body.active .search-container,
+#body.active .data-container {
+  background-color: rgba(42, 42, 42, 0.932);
+  color: rgb(243, 243, 243);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgb(0, 0, 0) 0px 30px 60px -30px inset,
+    rgba(2, 2, 3, 0.358) 0px -2px 6px 0px inset;
+}
+#body.active #search-city-name{
+  color: rgba(243, 243, 243);
+  background-color: rgba(79, 79, 79, 0.925);
+}
+#body.active #search-btn {
+  color: rgba(243, 243, 243);
+  background-color: rgba(79, 79, 79, 0.558);
+}
+#body.active .info-container,
+#body.active #source-code {
+  background-color: transparent;
+  color: rgba(243, 243, 243);
+}
+
+/* responsiveness */
 @media only screen and (min-width: 620px) {
   .data-container,
   .search-container {
     width: 75%;
   }
-  .personal-links a{
+  .personal-links a {
     display: contents;
   }
 }
@@ -123,7 +196,7 @@ button:hover {
   .search-container {
     width: 40%;
   }
-  .info-container{
+  .info-container {
     flex-direction: row;
     justify-content: space-between;
   }
