@@ -9,6 +9,7 @@ Welcome to this amazing Weather Application project! This web application aims t
 3. Location-based Forecast: The app detects the user's location and automatically displays the local weather forecast, providing personalized weather information.
 4. Interactive and Dynamic Design: The use of modern web technologies, including JavaScript, HTML, and CSS, ensures an engaging and dynamic experience for users.
 5. Responsive Design: The app is designed to be responsive and compatible with various devices, including desktops, tablets, and mobile phones.
+6. Light and Dark Mode: Choose between light and dark modes to suit your preferences and reduce eye strain during different times of the day.
 
 # Technologies Used
 1. JavaScript: The primary programming language used for the application's functionality and interactivity.
@@ -21,7 +22,7 @@ To get started with the Amazing Weather App project, follow these steps:
 1. Clone the repository: git clone https://github.com/Addy2408/WeatherApplication.git
 2. Navigate to the project directory: cd WeatherApplication
 3. Open the project in your preferred code editor.
-4. Launch the application by opening the index.html file in a web browser or use live-server extension(vs code editor).
+4. Launch the application by opening the index.html file in a web browser or use a live-server extension(vs code editor).
 
 # API Setup
 To ensure the application functions correctly, you will need to obtain an API key from a weather service provider. Follow these steps to set up the API:
