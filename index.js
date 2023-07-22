@@ -1,8 +1,8 @@
-const toggle = document.getElementById('toggle');
-toggle.onclick = function(){
-  document.getElementById('body').classList.toggle('active');
-  toggle.classList.toggle('active');
-}
+const toggle = document.getElementById("toggle");
+toggle.onclick = function () {
+  document.getElementById("body").classList.toggle("active");
+  toggle.classList.toggle("active");
+};
 
 // accessing latitude and longitude using js geolocation
 const success = async (position) => {
